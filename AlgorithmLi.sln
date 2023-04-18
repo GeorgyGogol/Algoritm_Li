@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33328.57
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AlgorithmLi", "AlgorithmLi\AlgorithmLi.vcxproj", "{798F3731-F30A-4893-BD9A-23899DD75D2A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{798F3731-F30A-4893-BD9A-23899DD75D2A}.Debug|x64.ActiveCfg = Debug|x64
+		{798F3731-F30A-4893-BD9A-23899DD75D2A}.Debug|x64.Build.0 = Debug|x64
+		{798F3731-F30A-4893-BD9A-23899DD75D2A}.Debug|x86.ActiveCfg = Debug|Win32
+		{798F3731-F30A-4893-BD9A-23899DD75D2A}.Debug|x86.Build.0 = Debug|Win32
+		{798F3731-F30A-4893-BD9A-23899DD75D2A}.Release|x64.ActiveCfg = Release|x64
+		{798F3731-F30A-4893-BD9A-23899DD75D2A}.Release|x64.Build.0 = Release|x64
+		{798F3731-F30A-4893-BD9A-23899DD75D2A}.Release|x86.ActiveCfg = Release|Win32
+		{798F3731-F30A-4893-BD9A-23899DD75D2A}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {69A620F7-99AF-4F07-B6F2-9BFCE6CA2FAB}
+	EndGlobalSection
+EndGlobal
