@@ -2,8 +2,9 @@
 
 #include <QPainter>
 
-CellItem::CellItem() :
-    QGraphicsItem(nullptr)
+CellItem::CellItem(algo::FieldCell* ptr) :
+    QGraphicsItem(nullptr),
+	pCell(ptr)
 {
 }
 
@@ -18,6 +19,8 @@ void CellItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, 
     Q_UNUSED(widget);
 
     painter->save();
+
+	int State = pCell->getStatus();
 
     QRectF dCell = boundingRect();
     painter->setPen(Qt::black);
@@ -45,9 +48,9 @@ void CellItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, 
 
         painter->drawRect(dCell);
     }
-    else if (State > 0)
+    if (pCell->getMovePoints() >= 0)
     {
-        painter->drawText(dCell, Qt::AlignCenter, QString::number(State));
+        painter->drawText(dCell, Qt::AlignCenter, QString::number(pCell->getMovePoints()));
     }
 
     painter->restore();

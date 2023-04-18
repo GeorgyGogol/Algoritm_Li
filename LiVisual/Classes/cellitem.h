@@ -3,10 +3,12 @@
 
 #include <QGraphicsItem>
 
+#include "FieldCell.h"
+
 class CellItem : public QGraphicsItem
 {
 public:
-    explicit CellItem();
+    explicit CellItem(algo::FieldCell* ptr);
     virtual ~CellItem() = default;
 
 public:
@@ -14,7 +16,7 @@ public:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr);
 
 public:
-    int State = -100;
+	algo::FieldCell* pCell;
 
 };
 

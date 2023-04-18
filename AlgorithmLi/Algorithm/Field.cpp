@@ -28,7 +28,7 @@ void algo::Field::SetMovePointsToCells(std::vector<Point> cells, int movePoints)
 {
     std::vector<Point> neighborCells;
 
-    for (auto coord : cells) {
+    for (Point coord : cells) {
         getCell(coord.getX(), coord.getY())->setMovePoints(movePoints);
 
         for (int y = coord.getY() - 1; y < coord.getY() + 1 + 1; ++y) {

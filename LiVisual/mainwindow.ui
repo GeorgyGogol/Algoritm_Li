@@ -32,7 +32,7 @@
      <x>0</x>
      <y>0</y>
      <width>400</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -46,8 +46,8 @@
     <property name="title">
      <string>&amp;Рассчеты</string>
     </property>
-    <addaction name="action_3"/>
-    <addaction name="action_2"/>
+    <addaction name="action_Calc"/>
+    <addaction name="action_CalcPath"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
@@ -58,12 +58,12 @@
     <string>Новое</string>
    </property>
   </action>
-  <action name="action_2">
+  <action name="action_CalcPath">
    <property name="text">
     <string>Задать точки</string>
    </property>
   </action>
-  <action name="action_3">
+  <action name="action_Calc">
    <property name="text">
     <string>Сделать расчет поля</string>
    </property>
