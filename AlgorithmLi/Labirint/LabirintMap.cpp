@@ -1,5 +1,5 @@
-#include "LabirintMap.h"
 #include "pch.h"
+#include "LabirintMap.h"
 
 //#include <stdlib>
 #include <random>

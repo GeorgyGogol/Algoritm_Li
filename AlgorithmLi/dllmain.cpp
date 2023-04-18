@@ -17,3 +17,29 @@ BOOL APIENTRY DllMain( HMODULE hModule,
     return TRUE;
 }
 
+
+extern "C" {
+
+	bool __declspec(dllexport) CreateField(int width, int height)
+	{
+		return false;
+	}
+
+	bool __declspec(dllexport) SaveField(const char* Path)
+	{
+		return false;
+	}
+
+	bool __declspec(dllexport) LoadField(const char* Path)
+	{
+		return false;
+	}
+
+	bool __declspec(dllexport) CalcField(int fromX, int fromY, int toX, int toY)
+	{
+		return false;
+	}
+
+
+
+}

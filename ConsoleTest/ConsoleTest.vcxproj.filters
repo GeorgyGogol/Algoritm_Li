@@ -36,6 +36,9 @@
     <ClCompile Include="..\AlgorithmLi\Algorithm\Point.cpp">
       <Filter>Aim</Filter>
     </ClCompile>
+    <ClCompile Include="..\AlgorithmLi\pch.cpp">
+      <Filter>Aim</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\AlgorithmLi\Abstract\BaseField.h">
@@ -51,6 +54,12 @@
       <Filter>Aim</Filter>
     </ClInclude>
     <ClInclude Include="..\AlgorithmLi\Algorithm\Point.h">
+      <Filter>Aim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AlgorithmLi\framework.h">
+      <Filter>Aim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AlgorithmLi\pch.h">
       <Filter>Aim</Filter>
     </ClInclude>
   </ItemGroup>

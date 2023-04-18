@@ -1,5 +1,5 @@
-#include "Point.h"
 #include "pch.h"
+#include "Point.h"
 
 using namespace algo;
 

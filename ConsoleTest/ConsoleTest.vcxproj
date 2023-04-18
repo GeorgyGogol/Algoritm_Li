@@ -72,11 +72,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)AlgorithmLi\Abstract;$(SolutionDir)AlgorithmLi\Labirint;$(SolutionDir)AlgorithmLi\Algorithm;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)AlgorithmLi;$(SolutionDir)AlgorithmLi\Abstract;$(SolutionDir)AlgorithmLi\Labirint;$(SolutionDir)AlgorithmLi\Algorithm;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)AlgorithmLi\Abstract;$(SolutionDir)AlgorithmLi\Labirint;$(SolutionDir)AlgorithmLi\Algorithm;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)AlgorithmLi;$(SolutionDir)AlgorithmLi\Abstract;$(SolutionDir)AlgorithmLi\Labirint;$(SolutionDir)AlgorithmLi\Algorithm;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -146,6 +146,7 @@
     <ClCompile Include="..\AlgorithmLi\Algorithm\FieldCell.cpp" />
     <ClCompile Include="..\AlgorithmLi\Algorithm\Point.cpp" />
     <ClCompile Include="..\AlgorithmLi\Labirint\LabirintMap.cpp" />
+    <ClCompile Include="..\AlgorithmLi\pch.cpp" />
     <ClCompile Include="ConsoleTest.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -153,7 +154,9 @@
     <ClInclude Include="..\AlgorithmLi\Algorithm\Field.h" />
     <ClInclude Include="..\AlgorithmLi\Algorithm\FieldCell.h" />
     <ClInclude Include="..\AlgorithmLi\Algorithm\Point.h" />
+    <ClInclude Include="..\AlgorithmLi\framework.h" />
     <ClInclude Include="..\AlgorithmLi\Labirint\LabirintMap.h" />
+    <ClInclude Include="..\AlgorithmLi\pch.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

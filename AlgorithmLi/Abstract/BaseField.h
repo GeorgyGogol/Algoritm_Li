@@ -10,14 +10,14 @@ namespace algo {
 			Width_(width), Heigth_(height)
 		{
 			Map_ = new TyFieldCell * [Heigth_];
-			for (auto y = 0; y < Heigth_; ++y) {
+			for (unsigned int y = 0; y < Heigth_; ++y) {
 				Map_[y] = new TyFieldCell[Width_];
 			}
 		}
 
         ~BaseField()
 		{
-			for (auto y = 0; y < Heigth_; ++y) {
+			for (unsigned int y = 0; y < Heigth_; ++y) {
 				delete[] Map_[y];
 			}
 			delete[] Map_;
