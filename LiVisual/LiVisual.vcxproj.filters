@@ -21,6 +21,9 @@
       <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
       <Extensions>ts</Extensions>
     </Filter>
+    <Filter Include="Algo">
+      <UniqueIdentifier>{45079519-464f-4d8d-b9af-fd55620a203e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="mainwindow.qrc">
@@ -46,10 +49,49 @@
     <ClCompile Include="Widgets\mainstatusbar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\AlgorithmLi\Abstract\BaseField.cpp">
+      <Filter>Algo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AlgorithmLi\Algorithm\Field.cpp">
+      <Filter>Algo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AlgorithmLi\Algorithm\FieldCell.cpp">
+      <Filter>Algo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AlgorithmLi\Algorithm\Point.cpp">
+      <Filter>Algo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AlgorithmLi\Labirint\LabirintMap.cpp">
+      <Filter>Algo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AlgorithmLi\pch.cpp">
+      <Filter>Algo</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Classes\cellitem.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AlgorithmLi\Abstract\BaseField.h">
+      <Filter>Algo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AlgorithmLi\Algorithm\Field.h">
+      <Filter>Algo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AlgorithmLi\Algorithm\FieldCell.h">
+      <Filter>Algo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AlgorithmLi\Algorithm\Point.h">
+      <Filter>Algo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AlgorithmLi\Labirint\LabirintMap.h">
+      <Filter>Algo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AlgorithmLi\framework.h">
+      <Filter>Algo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AlgorithmLi\pch.h">
+      <Filter>Algo</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

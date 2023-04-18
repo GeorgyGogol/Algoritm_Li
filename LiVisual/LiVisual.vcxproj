@@ -55,10 +55,10 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">
-    <IncludePath>$(ProjectDir)Classes;$(ProjectDir)Widgets;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)Classes;$(ProjectDir)Widgets;$(SolutionDir)AlgorithmLi;$(SolutionDir)AlgorithmLi\Abstract;$(SolutionDir)AlgorithmLi\Labirint;$(SolutionDir)AlgorithmLi\Algorithm;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">
-    <IncludePath>$(ProjectDir)Classes;$(ProjectDir)Widgets;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)Classes;$(ProjectDir)Widgets;$(SolutionDir)AlgorithmLi;$(SolutionDir)AlgorithmLi\Abstract;$(SolutionDir)AlgorithmLi\Labirint;$(SolutionDir)AlgorithmLi\Algorithm;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="Configuration">
     <ClCompile>
@@ -85,6 +85,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\AlgorithmLi\Abstract\BaseField.cpp" />
+    <ClCompile Include="..\AlgorithmLi\Algorithm\Field.cpp" />
+    <ClCompile Include="..\AlgorithmLi\Algorithm\FieldCell.cpp" />
+    <ClCompile Include="..\AlgorithmLi\Algorithm\Point.cpp" />
+    <ClCompile Include="..\AlgorithmLi\Labirint\LabirintMap.cpp" />
+    <ClCompile Include="..\AlgorithmLi\pch.cpp" />
     <ClCompile Include="Widgets\mainstatusbar.cpp" />
     <QtRcc Include="mainwindow.qrc" />
     <QtUic Include="mainwindow.ui" />
@@ -94,6 +100,13 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\AlgorithmLi\Abstract\BaseField.h" />
+    <ClInclude Include="..\AlgorithmLi\Algorithm\Field.h" />
+    <ClInclude Include="..\AlgorithmLi\Algorithm\FieldCell.h" />
+    <ClInclude Include="..\AlgorithmLi\Algorithm\Point.h" />
+    <ClInclude Include="..\AlgorithmLi\framework.h" />
+    <ClInclude Include="..\AlgorithmLi\Labirint\LabirintMap.h" />
+    <ClInclude Include="..\AlgorithmLi\pch.h" />
     <ClInclude Include="Classes\cellitem.h" />
     <QtMoc Include="Widgets\mainstatusbar.h" />
   </ItemGroup>
