@@ -81,6 +81,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(ProjectDir);$(ProjectDir)Algorithm;$(ProjectDir)Abstract;$(ProjectDir)Labirint;$(ProjectDir)Service;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)BuildDir\$(Configuration)-$(Platform)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>

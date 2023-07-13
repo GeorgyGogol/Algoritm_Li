@@ -56,6 +56,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">
     <IncludePath>$(ProjectDir)Classes;$(ProjectDir)Widgets;$(SolutionDir)AlgorithmLi;$(SolutionDir)AlgorithmLi\Abstract;$(SolutionDir)AlgorithmLi\Labirint;$(SolutionDir)AlgorithmLi\Algorithm;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)BuildDir\$(Configuration)-$(Platform)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">
     <IncludePath>$(ProjectDir)Classes;$(ProjectDir)Widgets;$(SolutionDir)AlgorithmLi;$(SolutionDir)AlgorithmLi\Abstract;$(SolutionDir)AlgorithmLi\Labirint;$(SolutionDir)AlgorithmLi\Algorithm;$(IncludePath)</IncludePath>
