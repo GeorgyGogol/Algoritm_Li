@@ -85,12 +85,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\AlgorithmLi\Abstract\BaseField.cpp" />
-    <ClCompile Include="..\AlgorithmLi\Algorithm\Field.cpp" />
-    <ClCompile Include="..\AlgorithmLi\Algorithm\FieldCell.cpp" />
-    <ClCompile Include="..\AlgorithmLi\Algorithm\Point.cpp" />
-    <ClCompile Include="..\AlgorithmLi\Labirint\LabirintMap.cpp" />
-    <ClCompile Include="..\AlgorithmLi\pch.cpp" />
+    <ClCompile Include="PointsSetFrom.cpp" />
     <ClCompile Include="Widgets\mainstatusbar.cpp" />
     <QtRcc Include="mainwindow.qrc" />
     <QtUic Include="mainwindow.ui" />
@@ -98,16 +93,11 @@
     <ClCompile Include="Classes\cellitem.cpp" />
     <ClCompile Include="mainwindow.cpp" />
     <ClCompile Include="main.cpp" />
+    <QtUic Include="PointsSetFrom.ui" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\AlgorithmLi\Abstract\BaseField.h" />
-    <ClInclude Include="..\AlgorithmLi\Algorithm\Field.h" />
-    <ClInclude Include="..\AlgorithmLi\Algorithm\FieldCell.h" />
-    <ClInclude Include="..\AlgorithmLi\Algorithm\Point.h" />
-    <ClInclude Include="..\AlgorithmLi\framework.h" />
-    <ClInclude Include="..\AlgorithmLi\Labirint\LabirintMap.h" />
-    <ClInclude Include="..\AlgorithmLi\pch.h" />
     <ClInclude Include="Classes\cellitem.h" />
+    <QtMoc Include="PointsSetFrom.h" />
     <QtMoc Include="Widgets\mainstatusbar.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
