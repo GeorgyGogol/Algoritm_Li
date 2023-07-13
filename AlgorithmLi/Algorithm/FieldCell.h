@@ -18,10 +18,14 @@ namespace algo {
 	public:
 		bool Movable() const noexcept;
         void setMovable(bool canMove) noexcept;
+        inline bool notMovable() const noexcept {
+            return !Movable();
+        }
 
 		void setMovePoints(int value);
 		int getMovePoints() const noexcept;
 		void resetMovePoints() noexcept;
+        bool isHaveMovePoints() const noexcept;
 
 		bool isMarked() const noexcept;
 		void setMarkedState(bool state = true) noexcept;

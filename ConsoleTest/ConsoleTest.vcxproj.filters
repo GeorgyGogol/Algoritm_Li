@@ -16,6 +16,15 @@
     <Filter Include="Aim">
       <UniqueIdentifier>{cce0bcab-19aa-49ce-af32-a6e001af8494}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Aim\Algo">
+      <UniqueIdentifier>{792b76d2-be3c-4e11-8337-d56279c09b2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Aim\Labirint">
+      <UniqueIdentifier>{67616202-aab9-43f6-a044-7ea2621d000f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Aim\Service">
+      <UniqueIdentifier>{32f9fdb6-fcb2-4405-a726-faedf8d83780}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleTest.cpp">
@@ -24,36 +33,27 @@
     <ClCompile Include="..\AlgorithmLi\Abstract\BaseField.cpp">
       <Filter>Aim</Filter>
     </ClCompile>
-    <ClCompile Include="..\AlgorithmLi\Algorithm\Field.cpp">
-      <Filter>Aim</Filter>
-    </ClCompile>
-    <ClCompile Include="..\AlgorithmLi\Algorithm\FieldCell.cpp">
-      <Filter>Aim</Filter>
-    </ClCompile>
-    <ClCompile Include="..\AlgorithmLi\Labirint\LabirintMap.cpp">
+    <ClCompile Include="..\AlgorithmLi\pch.cpp">
       <Filter>Aim</Filter>
     </ClCompile>
     <ClCompile Include="..\AlgorithmLi\Algorithm\Point.cpp">
-      <Filter>Aim</Filter>
+      <Filter>Aim\Algo</Filter>
     </ClCompile>
-    <ClCompile Include="..\AlgorithmLi\pch.cpp">
-      <Filter>Aim</Filter>
+    <ClCompile Include="..\AlgorithmLi\Algorithm\Field.cpp">
+      <Filter>Aim\Algo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AlgorithmLi\Algorithm\FieldCell.cpp">
+      <Filter>Aim\Algo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AlgorithmLi\Labirint\LabirintMap.cpp">
+      <Filter>Aim\Labirint</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AlgorithmLi\Service\RangeController.cpp">
+      <Filter>Aim\Service</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\AlgorithmLi\Abstract\BaseField.h">
-      <Filter>Aim</Filter>
-    </ClInclude>
-    <ClInclude Include="..\AlgorithmLi\Algorithm\Field.h">
-      <Filter>Aim</Filter>
-    </ClInclude>
-    <ClInclude Include="..\AlgorithmLi\Algorithm\FieldCell.h">
-      <Filter>Aim</Filter>
-    </ClInclude>
-    <ClInclude Include="..\AlgorithmLi\Labirint\LabirintMap.h">
-      <Filter>Aim</Filter>
-    </ClInclude>
-    <ClInclude Include="..\AlgorithmLi\Algorithm\Point.h">
       <Filter>Aim</Filter>
     </ClInclude>
     <ClInclude Include="..\AlgorithmLi\framework.h">
@@ -61,6 +61,21 @@
     </ClInclude>
     <ClInclude Include="..\AlgorithmLi\pch.h">
       <Filter>Aim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AlgorithmLi\Algorithm\Point.h">
+      <Filter>Aim\Algo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AlgorithmLi\Algorithm\Field.h">
+      <Filter>Aim\Algo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AlgorithmLi\Algorithm\FieldCell.h">
+      <Filter>Aim\Algo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AlgorithmLi\Labirint\LabirintMap.h">
+      <Filter>Aim\Labirint</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AlgorithmLi\Service\RangeController.h">
+      <Filter>Aim\Service</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

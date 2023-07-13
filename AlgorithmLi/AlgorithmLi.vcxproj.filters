@@ -19,7 +19,10 @@
     <Filter Include="Labirint">
       <UniqueIdentifier>{b618a80c-6832-4ec3-a585-759c319c4e16}</UniqueIdentifier>
     </Filter>
-    <Filter Include="GeneralAbstract">
+    <Filter Include="Service">
+      <UniqueIdentifier>{beaea588-be79-4bba-8607-e819b2d16729}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Abstract">
       <UniqueIdentifier>{00d838db-89d1-4fda-a51d-8fe1708683cc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -31,7 +34,7 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Abstract\BaseField.h">
-      <Filter>GeneralAbstract</Filter>
+      <Filter>Abstract</Filter>
     </ClInclude>
     <ClInclude Include="Algorithm\Point.h">
       <Filter>Algorithm</Filter>
@@ -45,6 +48,9 @@
     <ClInclude Include="Labirint\LabirintMap.h">
       <Filter>Labirint</Filter>
     </ClInclude>
+    <ClInclude Include="Service\RangeController.h">
+      <Filter>Service</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -54,7 +60,7 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Abstract\BaseField.cpp">
-      <Filter>GeneralAbstract</Filter>
+      <Filter>Abstract</Filter>
     </ClCompile>
     <ClCompile Include="Algorithm\Point.cpp">
       <Filter>Algorithm</Filter>
@@ -67,6 +73,9 @@
     </ClCompile>
     <ClCompile Include="Labirint\LabirintMap.cpp">
       <Filter>Labirint</Filter>
+    </ClCompile>
+    <ClCompile Include="Service\RangeController.cpp">
+      <Filter>Service</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

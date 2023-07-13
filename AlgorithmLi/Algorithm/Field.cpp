@@ -1,56 +1,62 @@
 #include "pch.h"
 #include "Field.h"
 
+#include "LabirintMap.h"
+#include "Point.h"
+#include "RangeController.h"
+
 #include <algorithm>
 
 algo::Field::Field(unsigned int width, unsigned int height) :
-	BaseField<FieldCell>(width, height)
+	BaseField<FieldCell>(width, height),
+    LocalRange(new serv::RangeController(width, height))
 {
 }
 
 algo::Field::Field(LabirintMap* pLabirint) :
-    BaseField<FieldCell> (pLabirint->getWidth(), pLabirint->getHeight())
+    BaseField<FieldCell> (pLabirint->getWidth(), pLabirint->getHeight()),
+    LocalRange(new serv::RangeController(pLabirint->getWidth(), pLabirint->getHeight()))
 {
-    FieldCell* pCell;
     for (unsigned int y = 0; y < getHeight(); ++y) {
         for (unsigned int x = 0; x < getWidth(); ++x) {
-            pCell = getCell(x, y);
-            pCell->setMovable(!pLabirint->getCellValue(x, y));
+            getCell(x, y)->setMovable(!pLabirint->getCellValue(x, y));
         }
     }
 }
 
 algo::Field::~Field()
 {
+    delete LocalRange;
 }
 
-void algo::Field::SetMovePointsToCells(std::vector<Point> cells, int movePoints)
+void algo::Field::SetMovePointsToCells(std::vector<Point>& cells, unsigned int movePoints)
 {
-    std::vector<Point> neighborCells;
+    std::vector<Point>* neighborCells = new std::vector<Point>;
 
     for (Point coord : cells) {
         getCell(coord.getX(), coord.getY())->setMovePoints(movePoints);
+    }
 
-        for (int y = coord.getY() - 1; y < coord.getY() + 1 + 1; ++y) {
-            if (!valideY(y)) continue;
+    for (Point coord : cells) {
+        LocalRange->SetCurrentPosition(coord.getX(), coord.getY());
 
-            for (int x = coord.getX() - 1; x < coord.getX() + 1 + 1; ++x) {
-                if (!valideX(x)) continue;
+        for (int y = LocalRange->getMinY(); y < LocalRange->getMaxY(); ++y) {
+            for (int x = LocalRange->getMinX(); x < LocalRange->getMaxX(); ++x) {
+                if (getCell(x, y)->notMovable()) continue;
+                if (getCell(x, y)->isHaveMovePoints()) continue;
+                if (std::find(neighborCells->begin(), neighborCells->end(), Point(x, y)) != neighborCells->end()) continue;
 
-                if (getCell(x, y)->getMovePoints() >= 0) continue;
-                if (!getCell(x, y)->Movable()) continue;
-
-
-                if (std::find(neighborCells.begin(), neighborCells.end(), Point(x, y)) != neighborCells.end()) continue;
-
-                neighborCells.push_back(Point(x, y));
+                neighborCells->push_back(Point(x, y));
             }
         }
     }
 
+    cells = *neighborCells;
+    delete neighborCells;
 
-    if (neighborCells.size() > 0)
-        SetMovePointsToCells(neighborCells, movePoints + 1);
+    if (cells.size() > 0) {
+        SetMovePointsToCells(cells, movePoints + 1);
+    }
 }
 
 int algo::Field::getCellStatus(unsigned int x, unsigned int y) const
@@ -80,13 +86,14 @@ void algo::Field::calcFieldTo(int X, int Y)
 	FieldCell* pCell;
 	while (localMin > 0)
 	{
-        for (int y = int(Y) - 1; y < int(Y) + 1 + 1; ++y) {
-            if (!valideY(y)) continue;
-            for (int x = int(X) - 1; x < int(X) + 1 + 1; ++x) {
-                if (!valideX(x)) continue;
+        LocalRange->SetCurrentPosition(X, Y);
 
+        for (int y = LocalRange->getMinY(); y < LocalRange->getMaxY(); ++y) {
+            for (int x = LocalRange->getMinX(); x < LocalRange->getMaxX(); ++x) {
 				pCell = getCell(x, y);
-				if (pCell->getMovePoints() < 0) continue;
+
+				if (!pCell->isHaveMovePoints()) continue;
+
 				if (pCell->getMovePoints() < localMin) {
 					localMin = pCell->getMovePoints();
 					minX = x;

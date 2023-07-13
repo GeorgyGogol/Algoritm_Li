@@ -44,8 +44,16 @@ namespace algo {
             return true;
         }
 
+        bool valideX(unsigned int X) {
+            return X < int(Width_);
+        }
+
         bool valideX(int X) {
             return X > -1 && X < int(Width_);
+        }
+
+        bool valideY(unsigned int Y) {
+            return Y < int(Heigth_);
         }
 
         bool valideY(int Y) {
@@ -74,7 +82,7 @@ namespace algo {
             return Map_[y][x];
         }
 
-        void setCell(unsigned int x, unsigned int y, TyFieldCell cell)
+        void setCell(unsigned int x, unsigned int y, const TyFieldCell& cell)
         {
             if (!checkCoordinate(x, y)) throw 1;
             Map_[y][x] = cell;

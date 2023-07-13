@@ -2,12 +2,18 @@
 
 #include "BaseField.h"
 #include "FieldCell.h"
-#include "LabirintMap.h"
 
 #include <vector>
-#include "Point.h"
+
 
 namespace algo {
+
+    class LabirintMap;
+    class Point;
+
+    namespace serv {
+        class RangeController;
+    }
 
 	class Field : public BaseField<FieldCell>
 	{
@@ -17,7 +23,9 @@ namespace algo {
         virtual ~Field();
 
     private:
-        void SetMovePointsToCells(std::vector<Point> cells, int movePoints);
+        serv::RangeController* LocalRange;
+
+        void SetMovePointsToCells(std::vector<Point>& cells, unsigned int movePoints);
 
 	public:
 		int getCellStatus(unsigned int x, unsigned int y) const;

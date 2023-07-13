@@ -36,6 +36,11 @@ void algo::FieldCell::resetMovePoints() noexcept
 	if (isThereCanMove_) MovePoints_ = -1;
 }
 
+bool algo::FieldCell::isHaveMovePoints() const noexcept
+{
+    return MovePoints_ > -1;
+}
+
 bool algo::FieldCell::isMarked() const noexcept
 {
 	return Marked_ > 0;

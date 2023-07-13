@@ -80,6 +80,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir);$(ProjectDir)Algorithm;$(ProjectDir)Abstract;$(ProjectDir)Labirint;$(ProjectDir)Service;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -160,6 +161,7 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="Labirint\LabirintMap.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Service\RangeController.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Abstract\BaseField.cpp" />
@@ -174,6 +176,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Service\RangeController.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

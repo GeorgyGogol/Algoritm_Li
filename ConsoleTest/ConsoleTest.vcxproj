@@ -80,6 +80,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)AlgorithmLi;$(SolutionDir)AlgorithmLi\Abstract;$(SolutionDir)AlgorithmLi\Labirint;$(SolutionDir)AlgorithmLi\Algorithm;$(SolutionDir)AlgorithmLi\Service;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -147,6 +148,7 @@
     <ClCompile Include="..\AlgorithmLi\Algorithm\Point.cpp" />
     <ClCompile Include="..\AlgorithmLi\Labirint\LabirintMap.cpp" />
     <ClCompile Include="..\AlgorithmLi\pch.cpp" />
+    <ClCompile Include="..\AlgorithmLi\Service\RangeController.cpp" />
     <ClCompile Include="ConsoleTest.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -157,6 +159,7 @@
     <ClInclude Include="..\AlgorithmLi\framework.h" />
     <ClInclude Include="..\AlgorithmLi\Labirint\LabirintMap.h" />
     <ClInclude Include="..\AlgorithmLi\pch.h" />
+    <ClInclude Include="..\AlgorithmLi\Service\RangeController.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
